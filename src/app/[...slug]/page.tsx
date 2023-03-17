@@ -22,8 +22,17 @@ const Page = async ({ params: { slug } }) => {
 export default Page
 
 export async function generateStaticParams() {
-  const pages = await fetchPages()
-
+  const pages = [
+    {
+      slug: 'home',
+      breadcrumbs: [
+        {
+          url: '/home',
+          label: 'Home Page',
+        },
+      ],
+    },
+  ]
   return pages.map(({ breadcrumbs }) => ({
     slug: breadcrumbs[breadcrumbs.length - 1].url.replace(/^\/|\/$/g, '').split('/'),
   }))
