@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import { Hero } from '../../components/Hero'
 import { RenderBlocks } from '../../components/RenderBlocks'
-import { fetchPage, fetchPages } from '../../graphql'
+import { fetchPage } from '../../graphql'
 import { UpdateTitle } from './updateTitle'
 
 const Page = async ({ params: { slug } }) => {
