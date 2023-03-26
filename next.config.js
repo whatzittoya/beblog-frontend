@@ -8,7 +8,12 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   images: {
     minimumCacheTTL: 6000,
-    domains: ['localhost', 'cms.payloadcms.com', 'stage.cms.payloadcms.com'],
+    domains: [
+      'localhost',
+      'cms.payloadcms.com',
+      'stage.cms.payloadcms.com',
+      'beblog-backend-production.up.railway.app',
+    ],
   },
   experimental: {
     appDir: true,
